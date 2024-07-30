@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+     {% for i in authors%}
+        <p>
+           <p>The name of the author is {{i.name}}
+            <p>The blogs written by {{i.name}} are 
+                <br>
+                {% for test in i.author_blogs.all %}
+                    <p>{{test.title}}</p>
+                    <p>{{test.description}}</p>
+                {% endfor %}
+        </p>
+        <p>
+         <P>contact number {{i.phone}}
+        </p>
+        {%endfor%}
+</body>
+</html>
+
